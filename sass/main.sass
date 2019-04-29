@@ -58,7 +58,7 @@ ul, li
 	&-subtitle
 		max-width: 440px
 .no-title
-	padding: 2.04vmax 0 5.2vmax
+	padding: 2.04vmax 0 0
 	&-left
 		width: 50%
 		+media-breakpoint-down(md)
@@ -70,6 +70,8 @@ ul, li
 			position: relative
 			width: 100%
 			margin-bottom: 0
+			&:last-child
+				margin-bottom: 5.2vmax
 			li
 				padding-bottom: 5px
 				span
@@ -116,6 +118,45 @@ ul, li
 		+media-breakpoint-down(md)
 			flex-direction: column
 			justify-content: center
+.line-budget
+	background: $gray url(../img/line-bg.png)
+	background-size: 52% 100%
+	background-position: right top
+	background-repeat: no-repeat
+	+media-breakpoint-down(md)
+		background-size: calc(100% + 30px) 50%
+		background-position: left -30px top
+		margin-top: 5vmax
+	&-wrap
+		min-height: 106px
+		display: flex
+		align-items: center
+		+media-breakpoint-down(md)
+			flex-direction: column-reverse
+			justify-content: space-around
+			min-height: 208px
+	&-left
+		width: 50%
+		+media-breakpoint-down(md)
+			width: 100%
+			text-align: center
+		.sum
+			font-size: 45px
+			font-weight: bold
+			span
+				font-size: 15px
+				font-weight: 600
+	&-right
+		text-align: center
+		width: 50%
+		+media-breakpoint-down(md)
+			width: 100%
+		h2
+			font-size: 25px
+			font-weight: bold
+			text-transform: uppercase
+			+media-breakpoint-down(md)
+				padding-top: 12px
 
 .no-title-left ul:nth-child(even)
 	&:before
