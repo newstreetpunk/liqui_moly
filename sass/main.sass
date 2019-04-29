@@ -28,6 +28,28 @@ ul, li
 	padding-left: 3.53vw
 	+media-breakpoint-down(md)
 		padding-left: 0
+section
+	padding-top: 5.2vmax
+	h2
+		font-size: 25px
+		font-weight: bold
+		text-align: center
+		text-transform: uppercase
+		position: relative
+		padding-bottom: 1.3vmax
+		margin-bottom: 4vmax
+		+media-breakpoint-down(xs)
+			font-size: 18px
+		&:before
+			content: ''
+			display: block
+			width: 75px
+			height: 5px	
+			background-color: $acc-bl
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
 
 .header
 	background-image: url(../img/header-bg.jpg)
@@ -63,7 +85,6 @@ ul, li
 		width: 50%
 		+media-breakpoint-down(md)
 			width: 100%
-			margin-bottom: 30px
 		ul
 			padding-bottom: 1vmax
 			padding-top: 1.8vmax
@@ -151,7 +172,7 @@ ul, li
 		width: 50%
 		+media-breakpoint-down(md)
 			width: 100%
-		h2
+		h3
 			font-size: 25px
 			font-weight: bold
 			text-transform: uppercase
@@ -161,5 +182,48 @@ ul, li
 .no-title-left ul:nth-child(even)
 	&:before
 		background-color: rgba($acc-rd, .5)
+
+.lecturehall
+	&-wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+media-breakpoint-down(md)
+			flex-direction: column
+			justify-content: center
+		> ul
+			width: 50%
+			+media-breakpoint-down(md)
+				width: 100%
+			> li
+				padding-left: 20px
+				margin-bottom: 10px
+				position: relative
+				font-weight: 600
+				&:last-child
+					margin-bottom: 0
+				&:after
+					content: ''
+					display: block
+					width: 7px
+					height: 7px
+					border-radius: 50%
+					background-color: $acc-rd
+					position: absolute
+					left: 0
+					top: 7px
+				ul
+					margin-top: 10px
+					li
+						padding-left: 20px
+						margin-bottom: 10px
+						font-weight: normal
+	&-img
+		width: 45%
+		height: auto
+		margin-top: -60px
+		+media-breakpoint-down(md)
+			margin-top: -10px
+			width: 60%
 
 @import "media" // Always at the end
