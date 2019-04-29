@@ -1,41 +1,58 @@
 @import "vars"
 @import "libs"
 
-::placeholder
-	color: #666
-
-::selection
-	background-color: $accent
-	color: #fff
-
 body
 	font-size: 16px
 	min-width: 320px
 	position: relative
-	line-height: 1.65
+	line-height: 1.5
 	font-family: $default-font
 	overflow-x: hidden
 	color: $text
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
-
-.img-responsive
+img
 	display: block
 	max-width: 100%
 	height: auto
-	&.img-width
-		width: 100%
-
-.text-center
-	text-align: center
-
 b, strong
-	font-weight: bold
+	font-weight: 600
+.visually-hidden
+	position: absolute
+	clip: rect(0 0 0 0)
+	width: 1px
+	height: 1px
+	margin: -1px
+.pl
+	padding-left: 3.53vw
+	+media-breakpoint-down(sm)
+		padding-left: 0
+
+.header
+	background-image: url(../img/header-bg.jpg)
+	background-size: cover
+	background-position: center top
+	background-repeat: no-repeat
+	color: #fff
+	+media-breakpoint-down(sm)
+		background-image: url(../img/header-bg-mob.jpg)
+	&-text
+		display: flex
+		align-items: flex-start
+		flex-direction: column
+		justify-content: center
+		min-height: 655px
+		height: 100%
+	&-title
+		font-size: 52px
+		font-weight: bold
+		+media-breakpoint-down(sm)
+			font-size: 28px
+			margin-bottom: 10px
+		+media-breakpoint-down(xs)
+			font-size: 25px
+	&-logo
+		margin-bottom: 30px
+	&-subtitle
+		max-width: 440px
 
 
 
