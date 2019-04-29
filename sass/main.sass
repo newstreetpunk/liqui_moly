@@ -17,6 +17,7 @@ b, strong
 	font-weight: 600
 ul, li
 	list-style: none
+	padding-left: 0
 .visually-hidden
 	position: absolute
 	clip: rect(0 0 0 0)
@@ -25,7 +26,7 @@ ul, li
 	margin: -1px
 .pl
 	padding-left: 3.53vw
-	+media-breakpoint-down(sm)
+	+media-breakpoint-down(md)
 		padding-left: 0
 
 .header
@@ -59,6 +60,9 @@ ul, li
 	padding: 2.04vmax 0 5.2vmax
 	&-left
 		width: 50%
+		+media-breakpoint-down(md)
+			width: 100%
+			margin-bottom: 30px
 		ul
 			padding-bottom: 1vmax
 			padding-top: 1.8vmax
@@ -94,13 +98,20 @@ ul, li
 	&-right
 		width: 50%
 		text-align: center
+		+media-breakpoint-down(md)
+			width: 100%
 		img
 			margin: 0 auto
 			filter: drop-shadow(20px 40px 111px rgba($text,.24))
+			+media-breakpoint-down(md)
+				width: 40%
 
 	&-wrap
 		display: flex
 		align-items: center
+		+media-breakpoint-down(md)
+			flex-direction: column
+			justify-content: center
 
 .no-title-left ul:nth-child(even)
 	&:before
