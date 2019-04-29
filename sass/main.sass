@@ -319,5 +319,50 @@ section
 			border-width: 0 15px 64px 15px
 			border-color: transparent transparent #fff transparent
 			left: -15px
+.themes
+	&-wrap
+		display: flex
+		position: relative
+		+media-breakpoint-down(md)
+			flex-direction: column
+		img
+			left: -7.3vw
+			top: 0
+			position: absolute
+			+media-breakpoint-down(md)
+				position: relative
+				left: auto
+
+		ul
+			width: 100%
+			position: absolute
+			left: 44%
+			top: 60px
+			+media-breakpoint-up(lg)
+				left: 45%
+			+media-breakpoint-down(lg)
+				width: auto
+				left: 60%
+				top: 30px
+			+media-breakpoint-down(md)
+				position: relative
+				left: auto
+			li
+				padding-left: 20px
+				margin-bottom: 10px
+				position: relative
+				font-weight: 600
+				&:last-child
+					margin-bottom: 0
+				&:after
+					content: ''
+					display: block
+					width: 7px
+					height: 7px
+					border-radius: 50%
+					background-color: $acc-rd
+					position: absolute
+					left: 0
+					top: 7px
 
 @import "media" // Always at the end
