@@ -367,12 +367,27 @@ section
 					top: 7px
 .promo
 	text-align: center
-	&-slider
+	&-slider, .promo-slider--man
+		max-width: 392px
+		height: 394px !important
+		margin: 0 auto
+		position: relative
+		top: 175px
+		+media-breakpoint-down(xs)
+			max-width: 325px
+			height: 325px !important
+			top: 146px
+		img
+			width: 100%
 		&-wrap
 			background-image: url(../img/iphone.png)
 			min-height: 713px
 			background-repeat: no-repeat
 			background-position: top center
+			background-size: auto
+			+media-breakpoint-down(xs)
+				background-size: cover
+				min-height: 600px
 			h4
 				font-size: 16px
 				font-weight: normal
@@ -382,3 +397,14 @@ section
 
 
 @import "media" // Always at the end
+
+@media (max-width: 380px)
+	.promo-slider-wrap
+		background-size: 150%
+		background-position: center top
+	.promo-slider
+		max-width: 80%
+		top: 36vw
+	.promo-slider--man
+		max-width: 80% !important
+		top: 36vw !important
