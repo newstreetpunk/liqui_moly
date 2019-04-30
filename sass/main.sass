@@ -368,11 +368,11 @@ section
 .promo
 	text-align: center
 	&-slider, .promo-slider--man
-		max-width: 392px
+		max-width: 390px
 		height: 394px !important
 		margin: 0 auto
 		position: relative
-		top: 175px
+		top: 179px
 		+media-breakpoint-down(xs)
 			max-width: 325px
 			height: 325px !important
@@ -385,6 +385,7 @@ section
 			background-repeat: no-repeat
 			background-position: top center
 			background-size: auto
+			margin-bottom: 1.4vmax
 			+media-breakpoint-down(xs)
 				background-size: cover
 				min-height: 600px
@@ -394,7 +395,21 @@ section
 				span
 					font-weight: 600
 					color: $acc-bl
-
+.promo-slider--next,
+.promo-slider--prev
+	width: 6.3vmax !important
+	position: absolute
+	top: 140px
+	cursor: pointer
+	z-index: 100
+	transition: all .3s ease
+	&:hover
+		opacity: .8
+.promo-slider--next
+	right: -13vw
+.promo-slider--prev
+	left: -13vw
+	transform: rotateZ(180deg)
 
 @import "media" // Always at the end
 
@@ -403,8 +418,11 @@ section
 		background-size: 150%
 		background-position: center top
 	.promo-slider
-		max-width: 80%
-		top: 36vw
+		max-width: 81%
+		top: 34.4vw
 	.promo-slider--man
-		max-width: 80% !important
-		top: 36vw !important
+		max-width: 81% !important
+		top: 34.4vw !important
+@media (max-width: 320px)
+	.promo-slider-wrap
+		min-height: 500px
